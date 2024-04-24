@@ -40,6 +40,13 @@
 #
 #   __git_complete gk gitk
 #
+# To add completion for git subcommands that live in external scripts,
+# define a function of the form '_git_${subcommand}' while replacing all dashes
+# with underscores, and the main git completion will make use of it.
+# For example, to add completion after 'git do-stuff' (which could e.g. live
+# in /usr/bin/git-do-stuff), name the completion function '_git_do_stuff'.
+# See _git_show, _git_bisect etc. below for more examples.
+#
 # Compatible with bash 3.2.57.
 #
 # You can set the following environment variables to influence the behavior of
